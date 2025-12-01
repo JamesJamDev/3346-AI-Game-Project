@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://cxne2at7as85k"
+path="res://.godot/imported/Pacman_01.png-4bb493ed2b3ed6cf2a681e6d5c40b0ba.image"
+
+[deps]
+
+source_file="res://Pacman_01.png"
+dest_files=["res://.godot/imported/Pacman_01.png-4bb493ed2b3ed6cf2a681e6d5c40b0ba.image"]
+
+[params]
+
