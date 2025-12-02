@@ -5,7 +5,7 @@ class_name Player
 var movement_direction = Vector2.ZERO
 
 
-@export var speed = 300
+@export var speed = 700
 @export var start_position: Node2D
 
 
