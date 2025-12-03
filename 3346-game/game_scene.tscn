@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=4 uid="uid://f4sxgum7hmyf"]
+=======
+[gd_scene load_steps=46 format=4 uid="uid://cp7e4f3kvp1x4"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://yl3y0n3um2t4" path="res://pacman.tscn" id="1_po0ka"]
 [ext_resource type="Texture2D" uid="uid://bmobygccl6doo" path="res://origmaps_2x.png" id="2_v1wow"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://cfko4r7ng1ha" path="res://ghost.tscn" id="3_v1wow"]
+[ext_resource type="Texture2D" uid="uid://ckgb3iwevo2bk" path="res://circle-xxl.png" id="4_mixcd"]
+>>>>>>> Stashed changes
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_po0ka"]
 friction = 0.0
@@ -6776,8 +6785,14 @@ texture = ExtResource("2_v1wow")
 85:72/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mj2jn"]
+<<<<<<< Updated upstream
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_po0ka")
+=======
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+navigation_layer_0/layers = 1
+>>>>>>> Stashed changes
 sources/0 = SubResource("TileSetAtlasSource_mixcd")
 
 [node name="Node2D" type="Node2D"]
@@ -6790,4 +6805,35 @@ tile_map_data = PackedByteArray("AADy/+7/AAAdAAAAAADy/+//AAAdAAEAAADy//D/AAAdAAI
 tile_set = SubResource("TileSet_mj2jn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+<<<<<<< Updated upstream
 zoom = Vector2(1.275, 1.275)
+=======
+zoom = Vector2(1.1, 1.1)
+
+[node name="Pacman" parent="." instance=ExtResource("2_po0ka")]
+position = Vector2(-1, 42)
+motion_mode = 1
+
+[node name="Blinky" parent="." instance=ExtResource("3_v1wow")]
+position = Vector2(-34, -10)
+motion_mode = 1
+
+[node name="Pinky" parent="." instance=ExtResource("3_v1wow")]
+position = Vector2(35, -8)
+motion_mode = 1
+type = 1
+
+[node name="Sprite2D" parent="Pinky" index="1"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_mixcd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -510
+position = Vector2(-2.4999084, -2)
+scale = Vector2(1555.0001, 846)
+texture = SubResource("PlaceholderTexture2D_po0ka")
+
+[editable path="Blinky"]
+[editable path="Pinky"]
+>>>>>>> Stashed changes
