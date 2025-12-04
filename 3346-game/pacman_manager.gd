@@ -19,9 +19,12 @@ func reset_player():
 	movement_direction = Vector2.ZERO
 	
 func _physics_process(delta):
+	if movement_direction != Vector2.ZERO:
+		rotation = movement_direction.angle()
+
 	velocity = movement_direction * speed * delta
 	move_and_slide()
-	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_pressed("left"):
