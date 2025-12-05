@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://di4ekekcgw115"]
+[gd_scene load_steps=5 format=3 uid="uid://di4ekekcgw115"]
 
 [ext_resource type="Script" uid="uid://hcx0oqt8wbmf" path="res://pacman_manager.gd" id="1_xv0j0"]
 [ext_resource type="Texture2D" uid="uid://bxha7rqyo2ivq" path="res://Pacman.png" id="2_hf5wl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_05hpe"]
 radius = 7.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hf5wl"]
+size = Vector2(5, 5)
 
 [node name="Pacman" type="CharacterBody2D"]
 script = ExtResource("1_xv0j0")
@@ -22,3 +25,10 @@ region_rect = Rect2(0, 0, 487.142, 497.782)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(70, 0)
+collision_mask = 3
+collide_with_areas = true
+
+[node name="predictionSpot" type="Node2D" parent="RayCast2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="RayCast2D/predictionSpot"]
+texture = SubResource("PlaceholderTexture2D_hf5wl")

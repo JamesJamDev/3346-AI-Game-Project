@@ -1,8 +1,9 @@
-[gd_scene load_steps=45 format=4 uid="uid://cp7e4f3kvp1x4"]
+[gd_scene load_steps=46 format=4 uid="uid://cp7e4f3kvp1x4"]
 
 [ext_resource type="PackedScene" uid="uid://di4ekekcgw115" path="res://pacman.tscn" id="2_po0ka"]
 [ext_resource type="Texture2D" uid="uid://bmobygccl6doo" path="res://origmaps_2x.png" id="2_v1wow"]
 [ext_resource type="PackedScene" uid="uid://cfko4r7ng1ha" path="res://ghost.tscn" id="3_v1wow"]
+[ext_resource type="Texture2D" uid="uid://ckgb3iwevo2bk" path="res://circle-xxl.png" id="4_mixcd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6e45b"]
 vertices = PackedVector2Array(198, -150, 122, -150, -122, -154, -118, -154, 202, 234, -202, 234, -26, 230, -22, 230, -198, 230, 118, 138, 74, 138, -26, 134, -22, 134, 198, 90, 122, 90, 70, 86, 74, 86, 223.46875, -6, 122, -6, 118, -10, 122, -10, 70, -54, 10, -54, -26, -58, -22, -58, 198, -154, 202, -218, 202, -102, 198, -214, -26, 90, -118, 90, -74, 86, -70, 86, 70, 38, 74, -6, -122, -106, -122, -150, -118, -150, -118, -10, 118, 134, 118, 90, 122, 182, 26, 90, 22, 86, -118, 86, 22, -218, 122, -214, 198, -106, 122, -102, 122, -106, 74, -150, 74, -102, 70, -106, 70, -150, 26, -102, 22, -106, 22, -58, 26, -58, 202, 86, 202, 138, 198, 134, 122, 86, 118, 86, 22, 134, 26, 134, 170, 138, 166, 134, 166, 182, 170, 182, 202, 182, 198, 230, 198, 186, 118, 186, 74, 186, 70, 182, 70, 138, -70, 138, -118, 134, 26, 186, 22, 182, 22, 230, 26, 230, -118, 138, -118, 186, -122, 182, -122, 90, -198, 186, -166, 182, -202, 182, -170, 182, -122, -6, -224.46875, -6, -224.46094, -10, -122, -10, 118, -6, 74, -10, 74, -58, 10, -26, 42, -26, 42, 10, -42, 10, -42, -26, -10, -26, -10, -54, -70, -54, -74, -58, -74, -10, -70, 38, -166, 134, -170, 138, -198, 134, -202, 138, -202, 86, -198, 90, -122, 86, 223.46094, -10, 118, -150, -70, -150, 122, -154, 118, -154, 118, -214, 26, -214, 22, -154, 26, -154, -22, -106, -26, -102, -70, -106, -74, -102, -74, -150, -198, -154, -198, -150, 70, 42, -70, 42, -74, -6, -22, 86, -118, -6, -122, -102, -22, -154, -26, -154, -22, -218, -26, -214, -202, -218, -118, -214, -22, 182, -26, 186, -70, 182, -74, 186, -74, 138, -198, -106, -202, -102, -198, -214, -122, -214)
@@ -7409,7 +7410,8 @@ margins = Vector2i(1, 1)
 38:22/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_v1wow")
 
 [sub_resource type="TileSet" id="TileSet_mj2jn"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_mixcd")
 
@@ -7433,9 +7435,18 @@ zoom = Vector2(0.84, 0.84)
 motion_mode = 1
 speed = 7500
 
-[node name="Ghost" parent="." instance=ExtResource("3_v1wow")]
+[node name="Blinky" parent="." instance=ExtResource("3_v1wow")]
 position = Vector2(-132, -10)
 motion_mode = 1
+
+[node name="Pinky" parent="." instance=ExtResource("3_v1wow")]
+position = Vector2(122, -7)
+motion_mode = 1
+type = 1
+
+[node name="Sprite2D" parent="Pinky" index="1"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_mixcd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -7443,3 +7454,5 @@ z_index = -510
 position = Vector2(-2.4999084, -2)
 scale = Vector2(1555.0001, 846)
 texture = SubResource("PlaceholderTexture2D_po0ka")
+
+[editable path="Pinky"]
