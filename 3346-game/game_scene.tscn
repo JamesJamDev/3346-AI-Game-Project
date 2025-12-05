@@ -7440,6 +7440,9 @@ motion_mode = 1
 [node name="Sprite2D" parent="Blinky" index="1"]
 modulate = Color(1, 0.09411765, 0, 1)
 
+[node name="scatterPos" parent="Blinky" index="3"]
+position = Vector2(341, -262)
+
 [node name="Inky" parent="." instance=ExtResource("3_v1wow")]
 position = Vector2(25, 126)
 motion_mode = 1
@@ -7451,6 +7454,9 @@ modulate = Color(0, 1, 1, 1)
 [node name="NavigationAgent2D" parent="Inky" index="2"]
 debug_use_custom = true
 debug_path_custom_color = Color(0, 1, 1, 1)
+
+[node name="scatterPos" parent="Inky" index="3"]
+position = Vector2(197, 178)
 
 [node name="Pinky" parent="." instance=ExtResource("3_v1wow")]
 position = Vector2(122, -7)
@@ -7465,6 +7471,25 @@ scale = Vector2(0.05, 0.05)
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 1, 1)
 
+[node name="scatterPos" parent="Pinky" index="3"]
+position = Vector2(-333, -244)
+
+[node name="Clyde" parent="." instance=ExtResource("3_v1wow")]
+position = Vector2(-37, 114)
+motion_mode = 1
+type = 3
+
+[node name="Sprite2D" parent="Clyde" index="1"]
+modulate = Color(1, 0.40784314, 0.1764706, 1)
+scale = Vector2(0.05, 0.05)
+
+[node name="NavigationAgent2D" parent="Clyde" index="2"]
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0.40990722, 0.22390288, 1)
+
+[node name="scatterPos" parent="Clyde" index="3"]
+position = Vector2(-170, 183)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 z_index = -510
@@ -7475,3 +7500,4 @@ texture = SubResource("PlaceholderTexture2D_po0ka")
 [editable path="Blinky"]
 [editable path="Inky"]
 [editable path="Pinky"]
+[editable path="Clyde"]

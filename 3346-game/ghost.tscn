@@ -25,9 +25,11 @@ target_desired_distance = 0.1
 path_max_distance = 1000.0
 simplify_epsilon = 0.05
 avoidance_enabled = true
-radius = 7.0
+radius = 20.0
 neighbor_distance = 10000.0
-max_speed = 28965.97
 avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
+
+[node name="scatterPos" type="Node2D" parent="."]
+top_level = true
