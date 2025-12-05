@@ -31,3 +31,6 @@ collide_with_areas = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RayCast2D/predictionSpot"]
 texture = SubResource("PlaceholderTexture2D_hf5wl")
+
+[node name="TwoAhead" type="Node2D" parent="."]
+position = Vector2(25, 0)

@@ -10,6 +10,7 @@ var movement_direction = Vector2.ZERO
 @export var start_position: Node2D
 @onready var prediction_spot: Node2D = $RayCast2D/predictionSpot
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
+@onready var two_ahead = $TwoAhead
 
 
 @onready var collision_shape_2d = $CollisionShape2D

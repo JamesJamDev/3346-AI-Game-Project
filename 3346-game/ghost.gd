@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var pacman := $"../Pacman"
 @export var type : GhostType
 
+
 enum GhostType {Blinky, Pinky, Inky, Clyde}
 
 
@@ -15,6 +16,9 @@ func _physics_process(delta: float) -> void:
 	
 	if type == GhostType.Pinky:
 		agent.target_position = pacman.prediction_spot.global_position
+	
+	if type == GhostType.Inky:
+		agent.target_position = pacman.global_position + (pacman.global_position - $"../Blinky".global_position)
 	
 
 	# Get next path point
