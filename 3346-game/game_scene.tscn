@@ -7431,10 +7431,11 @@ navigation_visibility_mode = 1
 zoom = Vector2(0.84, 0.84)
 
 [node name="Pacman" parent="." instance=ExtResource("2_po0ka")]
+position = Vector2(1, 42)
 motion_mode = 1
 
 [node name="Blinky" parent="." instance=ExtResource("3_v1wow")]
-position = Vector2(-132, -10)
+position = Vector2(-27, -7)
 motion_mode = 1
 
 [node name="Sprite2D" parent="Blinky" index="1"]
@@ -7444,7 +7445,7 @@ modulate = Color(1, 0.09411765, 0, 1)
 position = Vector2(341, -262)
 
 [node name="Inky" parent="." instance=ExtResource("3_v1wow")]
-position = Vector2(25, 126)
+position = Vector2(32, -9)
 motion_mode = 1
 type = 2
 
@@ -7459,7 +7460,7 @@ debug_path_custom_color = Color(0, 1, 1, 1)
 position = Vector2(197, 178)
 
 [node name="Pinky" parent="." instance=ExtResource("3_v1wow")]
-position = Vector2(122, -7)
+position = Vector2(-2, -17)
 motion_mode = 1
 type = 1
 
@@ -7475,7 +7476,7 @@ debug_path_custom_color = Color(1, 0, 1, 1)
 position = Vector2(-333, -244)
 
 [node name="Clyde" parent="." instance=ExtResource("3_v1wow")]
-position = Vector2(-37, 114)
+position = Vector2(-7, -7)
 motion_mode = 1
 type = 3
 
@@ -7496,6 +7497,13 @@ z_index = -510
 position = Vector2(-2.4999084, -2)
 scale = Vector2(1555.0001, 846)
 texture = SubResource("PlaceholderTexture2D_po0ka")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -21.0
+offset_top = -285.0
+offset_right = 219.0
+offset_bottom = -245.0
+text = "Press \"R\" to reload level"
 
 [editable path="Blinky"]
 [editable path="Inky"]

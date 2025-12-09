@@ -47,3 +47,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		movement_direction = Vector2.DOWN
 	elif Input.is_action_pressed("up"):
 		movement_direction = Vector2.UP
+	
+	if Input.is_key_pressed(Key.KEY_R):
+		get_tree().reload_current_scene()
